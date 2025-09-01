@@ -59,7 +59,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
                 <Icon name="Car" size={24} className="text-white" />
               </div>
               <div>
@@ -78,7 +78,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-blue-700 to-slate-800 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl font-bold mb-6">Автомобили из Азии</h2>
           <p className="text-xl mb-8 opacity-90">Прямые поставки с японских, корейских и китайских аукционов</p>
@@ -99,7 +99,7 @@ const Index = () => {
                 <SelectItem value="china">Китай</SelectItem>
               </SelectContent>
             </Select>
-            <Button size="lg" className="bg-red-600 hover:bg-red-700">
+            <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
               <Icon name="Search" size={20} className="mr-2" />
               Найти
             </Button>
@@ -148,7 +148,7 @@ const Index = () => {
                     alt={vehicle.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <Badge className="absolute top-3 right-3 bg-blue-600">
+                  <Badge className="absolute top-3 right-3 bg-blue-600 text-white">
                     {vehicle.status}
                   </Badge>
                 </div>
@@ -167,7 +167,7 @@ const Index = () => {
                     <span className="text-2xl font-bold text-blue-600">{vehicle.price}</span>
                     <span className="text-sm text-gray-500">Аукцион: {vehicle.auction}</span>
                   </div>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                     <Icon name="Phone" size={16} className="mr-2" />
                     Узнать детали
                   </Button>
@@ -190,7 +190,7 @@ const Index = () => {
             {services.map((service, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon name={service.icon as any} size={24} className="text-white" />
                   </div>
                   <CardTitle className="text-lg">{service.title}</CardTitle>
@@ -203,7 +203,7 @@ const Index = () => {
       </section>
 
       {/* Auction Integration */}
-      <section id="auctions" className="py-20 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
+      <section id="auctions" className="py-20 bg-gradient-to-r from-blue-900 to-blue-950 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Интеграция с аукционами</h2>
@@ -213,7 +213,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-white/10 border-white/20 text-white">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   🇯🇵
                 </div>
                 <CardTitle>Японские аукционы</CardTitle>
@@ -237,7 +237,7 @@ const Index = () => {
             
             <Card className="bg-white/10 border-white/20 text-white">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   🇨🇳
                 </div>
                 <CardTitle>Китайские производители</CardTitle>
@@ -267,7 +267,7 @@ const Index = () => {
                 { step: '4', title: 'Получение', desc: 'Оформление и передача' }
               ].map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
                     {item.step}
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
